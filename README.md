@@ -2,7 +2,9 @@
 
 The Indoor Air Quality Widget displays the current value of the measured indoor air quality and the corresponding condition. In addition, it provides a recommendation on how the indoor air quality can be improved in case it is necessary.
 
+![level_hazardous](https://user-images.githubusercontent.com/57527184/146772598-1ccbf07e-3c8a-4630-8ed6-a130e4b0846a.png)
 
+![level_moderate](https://user-images.githubusercontent.com/57527184/146772603-3998ed7f-5ece-4bff-81b4-f21077ca3e5d.png)
 
 ### Installation - for the dashboards using Runtime Widget Loader
 1. Download the latest `indoor-air-qality-widget-{version}.zip` file from the Releases section.
