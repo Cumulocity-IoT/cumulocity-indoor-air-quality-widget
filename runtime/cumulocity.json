@@ -1,0 +1,17 @@
+{
+  "name": "Indoor Air Quality Widget",
+  "contextPath": "indoor-air-quality-widget",
+  "key": "indoor-air-quality-widget-application-key",
+  "contentSecurityPolicy": "default-src 'self'",
+  "icon": {
+    "class": "fa fa-diamond"
+  },
+  "manifest": {
+    "noAppSwitcher": true,
+    "requiredPlatformVersion": "1006.3.0 - 1010.0.8",
+    "version": "1.0.0",
+    "author": "Christian Guether - Software AG, Global Presales",
+    "description": "Displays the indoor air quality and its current level. Also shows a recommendation for potential countermeasures to improve the air quality.",
+    "license": "Apache 2.0"
+  }
+}

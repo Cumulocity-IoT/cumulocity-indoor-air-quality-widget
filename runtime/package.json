@@ -1,0 +1,11 @@
+{
+  "name": "indoor-air-quality-widget",
+  "interleave": {
+    "dist\\bundle-src\\custom-widget.js": "indoor-air-quality-widget-CustomWidget",
+    "dist/bundle-src/custom-widget.js": "indoor-air-quality-widget-CustomWidget"
+  },
+  "version": "1.0.0",
+  "description": "Displays the indoor air quality and its current level. Also shows a recommendation for potential countermeasures to improve the air quality.",
+  "author": "Christian Guether - Software AG, Global Presales",
+  "license": "Apache 2.0"
+}
