@@ -29,7 +29,7 @@ import { IndoorAirQualityWidgetConfigurationComponent } from './iaq.config.compo
                             ng1: {
                                 options: {
                                     noDeviceTarget: false, // Set this to true to hide the device selector.
-                                    groupsSelectable: false // Set this, if not only devices should be selectable.
+                                    groupsSelectable: true // Set this, if not only devices should be selectable.
                                 }
                             }
                         }
