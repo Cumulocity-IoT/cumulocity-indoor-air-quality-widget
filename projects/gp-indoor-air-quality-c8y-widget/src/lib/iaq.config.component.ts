@@ -8,11 +8,10 @@ import { WidgetConfiguration } from './iaq.model';
 @Component({
     selector: 'indoor-air-quality-widget-configuration',
     templateUrl: 'iaq.config.component.html',
-    providers: [IndoorAirQualityConfigWidgetService],
-    viewProviders: [{ provide: ControlContainer, useExisting: NgForm }]
+    providers: [IndoorAirQualityConfigWidgetService]
 })
 
-export class IndoorAirQualityWidgetConfigurationComponent implements OnInit, DoCheck, DynamicComponent {
+export class IndoorAirQualityWidgetConfigurationComponent implements DoCheck {
     @Input() config: WidgetConfiguration;
 
     deviceId: string;
@@ -27,8 +26,7 @@ export class IndoorAirQualityWidgetConfigurationComponent implements OnInit, DoC
         if (!this.config || !this.config.device || !this.config.dataPoint) {
             return;
         }
-        console.log('on init');
-        console.log(this.config);
+
         this.selectedDataPoint = `${this.config.dataPoint.fragment}.${this.config.dataPoint.series}`;
     }
 
@@ -42,10 +40,8 @@ export class IndoorAirQualityWidgetConfigurationComponent implements OnInit, DoC
     }
 
     onDataPointSelected() {
-        console.log('selected data point: ', this.selectedDataPoint);
         const measurement: string[] = this.selectedDataPoint.split('.');
         this.config = Object.assign(this.config, { dataPoint: { fragment: measurement[0], series: measurement[1] } });
-        console.log('config: ', this.config);
     }
 
     private async updateSupportedDataPointSeries() {
