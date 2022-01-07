@@ -5,7 +5,7 @@
         </div>
         <div class="col-lg-8 d-flex d-col j-c-center a-i-center"
             [style.background-color]="currentIndoorAirQuality.cssColor">
-            <div class="iaq-value">IAQ: {{currentIndoorAirQuality.value}}</div>
+            <div class="iaq-value">IAQ: {{currentIndoorAirQuality.value | number: '1.0-0'}}</div>
             <div class="iaq-label">{{currentIndoorAirQuality.label}}</div>
         </div>
     </div>
