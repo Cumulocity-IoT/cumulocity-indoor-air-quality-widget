@@ -1,36 +1,55 @@
 .iaq-container {
-    >div {
-        padding: 0px !important;
-    }
+  padding      : 0px 20px;
+  margin-bottom: 10px;
+
+  >div {
+    padding: 0px !important;
+  }
 }
 
 .iaq-value {
-    font-size: 2.5em;
-    color    : #FFF;
+  font-size: 1.5em;
+  color    : #fff;
 }
 
 .iaq-label {
-    text-align: center;
-    font-size: 18px;
-    color    : #FFF;
+  text-align: center;
+  font-size : 16px;
+  color     : #fff;
 }
 
 .divider {
-    border-top   : 5px solid;
-    margin       : 10px 50px;
-    border-radius: 2px;
+  border-top   : 5px solid;
+  margin       : 10px 50px;
+  border-radius: 2px;
 }
 
 .recommendation-container {
-    text-align: center;
-    padding: 0px 20px;
+  text-align: center;
+  padding   : 0px 20px;
 
-    .headline {
-        font-size: 18px;
-    }
+  .headline {
+    font-size: 18px;
+  }
 
-    .recommendation {
-        font-size  : 24px;
-        font-weight: bold;
-    }
+  .recommendation {
+    font-size  : 16px;
+    font-weight: bold;
+  }
+}
+
+.svg-container {
+  display          : flex;
+  position         : relative;
+  width            : 100%;
+  // padding-bottom: 100%;
+  vertical-align   : top;
+  overflow         : hidden;
+}
+
+.svg-content {
+  display : inline-block;
+  position: absolute;
+  top     : 0;
+  left    : 0;
 }

@@ -1,17 +1,17 @@
 <div *ngIf="!!currentIndoorAirQuality">
-    <div class="iaq-container d-flex">
-        <div class="col-lg-4" [style.background-color]="currentIndoorAirQuality.cssColor">
-            <img style="width: 100%;" [src]="currentIndoorAirQuality.icon" />
+  <indoor-air-quality-gauge-component [airQuality]="currentIndoorAirQuality.value">
+  </indoor-air-quality-gauge-component>
+  <div style="padding: 0px 20px; margin-top: -20px;">
+    <div class="iaq-container d-flex j-c-center" [style.background-color]="currentIndoorAirQuality.cssColor">
+      <div class="col-lg-12 d-flex d-col j-c-center a-i-center">
+        <div class="iaq-value">
+          Air Quality: {{ currentIndoorAirQuality.value | number: '1.0-0' }}
         </div>
-        <div class="col-lg-8 d-flex d-col j-c-center a-i-center"
-            [style.background-color]="currentIndoorAirQuality.cssColor">
-            <div class="iaq-value">IAQ: {{currentIndoorAirQuality.value | number: '1.0-0'}}</div>
-            <div class="iaq-label">{{currentIndoorAirQuality.label}}</div>
-        </div>
+        <div class="iaq-label">{{ currentIndoorAirQuality.label }}</div>
+      </div>
     </div>
-    <hr class="divider" [style.color]="currentIndoorAirQuality.cssColor" />
     <div class="recommendation-container" [style.color]="currentIndoorAirQuality.cssColor">
-        <div class="headline">Recommendation</div>
-        <div class="recommendation">{{currentIndoorAirQuality.recommendation}}</div>
+      <div class="recommendation">{{ currentIndoorAirQuality.recommendation }}</div>
     </div>
+  </div>
 </div>

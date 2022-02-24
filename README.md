@@ -3,12 +3,13 @@
 The Indoor Air Quality Widget displays the current value of the measured indoor air quality and the corresponding condition. In addition, it provides a recommendation on how the indoor air quality can be improved in case it is necessary. The widget expects a measurement in the range between 0 and 500.
 
 The supported levels are:
-* good - 0-50
-* moderate - 51-100
-* Unhealthy for sensitive groups - 101-150
-* Unhealthy - 151-200
-* Very unhealthy - 201-300
-* Hazardous - 301-500
+* Excellent - 0-50
+* Good - 51-100
+* Lightly Polluted - 101-150
+* Moderately Polluted - 151-200
+* Heavily Polluted - 201-250
+* Severely Polluted - 251-350
+* Extremly Polluted - 351-500
 
 **Preview**:
 
