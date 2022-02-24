@@ -1,50 +1,51 @@
 import { Component, DoCheck, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { ControlContainer, NgForm } from '@angular/forms';
-import { DynamicComponent, OnBeforeSave } from '@c8y/ngx-components';
 import { get, has } from 'lodash';
 import { IndoorAirQualityConfigWidgetService } from './iaq.config.service';
 import { WidgetConfiguration } from './iaq.model';
 
 @Component({
-    selector: 'indoor-air-quality-widget-configuration',
-    templateUrl: 'iaq.config.component.html',
-    providers: [IndoorAirQualityConfigWidgetService]
+  selector: 'indoor-air-quality-widget-configuration',
+  templateUrl: 'iaq.config.component.html',
+  providers: [IndoorAirQualityConfigWidgetService]
 })
-
 export class IndoorAirQualityWidgetConfigurationComponent implements DoCheck {
-    @Input() config: WidgetConfiguration;
+  @Input() config: WidgetConfiguration;
 
-    deviceId: string;
+  deviceId: string;
 
-    supportedDataPointSeries: string[];
+  supportedDataPointSeries: string[];
 
-    selectedDataPoint: string;
+  selectedDataPoint: string;
 
-    constructor(private iaqConfigWidgetService: IndoorAirQualityConfigWidgetService) { }
+  constructor(private iaqConfigWidgetService: IndoorAirQualityConfigWidgetService) { }
 
-    ngOnInit(): void {
-        if (!this.config || !this.config.device || !this.config.dataPoint) {
-            return;
-        }
-
-        this.selectedDataPoint = `${this.config.dataPoint.fragment}.${this.config.dataPoint.series}`;
+  ngOnInit(): void {
+    if (!this.config || !this.config.device || !this.config.dataPoint) {
+      return;
     }
 
-    ngDoCheck(): void {
-        if (!this.config.device || this.config.device.id === this.deviceId) {
-            return;
-        }
+    this.selectedDataPoint = `${this.config.dataPoint.fragment}.${this.config.dataPoint.series}`;
+  }
 
-        this.deviceId = get(this.config, 'device.id');
-        this.updateSupportedDataPointSeries();
+  ngDoCheck(): void {
+    if (!this.config.device || this.config.device.id === this.deviceId) {
+      return;
     }
 
-    onDataPointSelected() {
-        const measurement: string[] = this.selectedDataPoint.split('.');
-        this.config = Object.assign(this.config, { dataPoint: { fragment: measurement[0], series: measurement[1] } });
-    }
+    this.deviceId = get(this.config, 'device.id');
+    this.updateSupportedDataPointSeries();
+  }
 
-    private async updateSupportedDataPointSeries() {
-        this.supportedDataPointSeries = await this.iaqConfigWidgetService.getSupportedDataPointSeries(get(this.config, 'device.id'));
-    }
+  onDataPointSelected() {
+    const measurement: string[] = this.selectedDataPoint.split('.');
+    this.config = Object.assign(this.config, {
+      dataPoint: { fragment: measurement[0], series: measurement[1] }
+    });
+  }
+
+  private async updateSupportedDataPointSeries() {
+    this.supportedDataPointSeries = await this.iaqConfigWidgetService.getSupportedDataPointSeries(
+      get(this.config, 'device.id')
+    );
+  }
 }

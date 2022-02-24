@@ -1,10 +1,11 @@
 <div class="form-group" *ngIf="!!supportedDataPointSeries">
-    <c8y-form-group>
-        <label>Select Data Point for Indoor Air Quality</label>
-        <div  style="width: 50%;" class="c8y-select-wrapper">
-            <select name="data-point-selector" class="form-control" [(ngModel)]="selectedDataPoint" [required]="true" (change)="onDataPointSelected()">
-                <option *ngFor="let dataPoint of supportedDataPointSeries">{{dataPoint}}</option>
-            </select>
-        </div>
-    </c8y-form-group>
+  <c8y-form-group>
+    <label>Select Data Point for Indoor Air Quality</label>
+    <div style="width: 50%;" class="c8y-select-wrapper">
+      <select name="data-point-selector" class="form-control" [(ngModel)]="selectedDataPoint" [required]="true"
+        (change)="onDataPointSelected()">
+        <option *ngFor="let dataPoint of supportedDataPointSeries">{{ dataPoint }}</option>
+      </select>
+    </div>
+  </c8y-form-group>
 </div>

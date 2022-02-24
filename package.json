@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "c8ycli server -u {{tenant_url}}",
+    "start": "c8ycli server -u https://lora-sandbox.eu-latest.cumulocity.com",
     "build": "c8ycli build",
     "deploy": "c8ycli deploy",
     "runtime": "gulp --gulpfile ./runtime/gulpfile.js"
@@ -28,7 +28,9 @@
     "zone.js": "~0.9.1",
     "@c8y/ng1-modules": "1010.0.23",
     "angular": "1.6.9",
-    "@c8y/style": "1010.0.23"
+    "@c8y/style": "1010.0.23",
+    "d3v2": "npm:d3@^6.5.0",
+    "d3-scalev2": "npm:d3-scale@^4.0.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.803.23",
@@ -62,7 +64,8 @@
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-external-import": "^2.2.3",
-    "gulp-json-modify": "^1.0.2"
+    "gulp-json-modify": "^1.0.2",
+    "@types/d3": "^6.2.0"
   },
   "c8y": {
     "application": {

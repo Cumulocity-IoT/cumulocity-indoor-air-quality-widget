@@ -3,16 +3,17 @@
 The Indoor Air Quality Widget displays the current value of the measured indoor air quality and the corresponding condition. In addition, it provides a recommendation on how the indoor air quality can be improved in case it is necessary. The widget expects a measurement in the range between 0 and 500.
 
 The supported levels are:
-* good - 0-50
-* moderate - 51-100
-* Unhealthy for sensitive groups - 101-150
-* Unhealthy - 151-200
-* Very unhealthy - 201-300
-* Hazardous - 301-500
+* Excellent - 0-50
+* Good - 51-100
+* Lightly Polluted - 101-150
+* Moderately Polluted - 151-200
+* Heavily Polluted - 201-250
+* Severely Polluted - 251-350
+* Extremly Polluted - 351-500
 
 **Preview**:
 
-![level_preview](https://user-images.githubusercontent.com/57527184/146789778-1ba00e5e-7dbb-47e7-9bbd-00ac0137ac03.png)
+![air_quality](https://user-images.githubusercontent.com/57527184/155506753-1f381610-3498-44b2-b60c-eea2a9c6e5ee.png)
 
 ### Installation - for the dashboards using Runtime Widget Loader
 1. Download the latest `indoor-air-qality-widget-{version}.zip` file from the Releases section.
@@ -40,3 +41,4 @@ _____________________
 For more information you can Ask a Question in the [TECHcommunity Forums](http://tech.forums.softwareag.com/techjforum/forums/list.page?product=cumulocity).
   
 You can find additional information in the [Software AG TECHcommunity](http://techcommunity.softwareag.com/home/-/product/name/cumulocity).
+
