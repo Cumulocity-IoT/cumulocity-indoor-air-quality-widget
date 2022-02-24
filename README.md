@@ -13,7 +13,7 @@ The supported levels are:
 
 **Preview**:
 
-![level_preview](https://user-images.githubusercontent.com/57527184/146789778-1ba00e5e-7dbb-47e7-9bbd-00ac0137ac03.png)
+![air_quality](https://user-images.githubusercontent.com/57527184/155506753-1f381610-3498-44b2-b60c-eea2a9c6e5ee.png)
 
 ### Installation - for the dashboards using Runtime Widget Loader
 1. Download the latest `indoor-air-qality-widget-{version}.zip` file from the Releases section.
@@ -41,3 +41,4 @@ _____________________
 For more information you can Ask a Question in the [TECHcommunity Forums](http://tech.forums.softwareag.com/techjforum/forums/list.page?product=cumulocity).
   
 You can find additional information in the [Software AG TECHcommunity](http://techcommunity.softwareag.com/home/-/product/name/cumulocity).
+
